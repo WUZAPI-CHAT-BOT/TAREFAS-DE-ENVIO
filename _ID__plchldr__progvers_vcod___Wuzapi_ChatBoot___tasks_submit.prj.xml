@@ -1,8 +1,8 @@
-<TaskerData sr="" dvi="1" tv="6.5.5-beta">
+<TaskerData sr="" dvi="1" tv="6.5.6-rc">
 	<Project sr="proj0" ve="2">
 		<cdate>1742831739518</cdate>
 		<name>(ID: plchldr) progvers(vcod) -Wuzapi ChatBoot - tasks submit</name>
-		<tids>59,41,71,429,421,392,457,459,460,402,370,419,390,368,412,388,461,369,466,403,374,365,383,413,391,458,462,422</tids>
+		<tids>59,41,413,71,402,391,412,421,466,458,429,374,419,392,403,459,422,370,369,461,457,365,368,388,383,462,460,390</tids>
 		<tsort>UserReverse</tsort>
 		<Share sr="Share">
 			<b>true</b>
@@ -2037,14 +2037,14 @@ Enter the phone number you want to check if it is linked to WhatsApp ex:. 558122
 	</Task>
 	<Task sr="task41">
 		<cdate>1731963712394</cdate>
-		<edate>1746682484092</edate>
+		<edate>1747139280375</edate>
 		<id>41</id>
 		<nme>#GENERATE CODES ( JAVA SCRIPT - CSS - SH ) v(1.0)</nme>
 		<pri>100</pri>
 		<rty>2</rty>
 		<Action sr="act0" ve="7">
 			<code>37</code>
-			<coll>false</coll>
+			<coll>true</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%par1</lhs>
@@ -3649,7 +3649,1154 @@ Tipo
 			<Int sr="arg3" val="0"/>
 			<Str sr="arg4" ve="3"/>
 		</Action>
+		<Action sr="act70" ve="7">
+			<code>37</code>
+			<coll>true</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>update</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act71" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%project_path</Str>
+			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/WEB VIEW/Scenes WuzapiChatBot/check-update</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act72" ve="7">
+			<code>410</code>
+			<label>&lt;b&gt;&lt;font color=#00bfff&gt;
+
+project_path "css"</label>
+			<Str sr="arg0" ve="3">%project_path/css/index.css</Str>
+			<Str sr="arg1" ve="3">:root {
+    --primary-color: #25d366; /* Verde claro para footer */
+    --secondary-color: #075e54; /* Verde escuro para botões */
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --accent-color: #e0e7ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(circle, #0a0a1a 0%, #1a2a3a 70%, #25d366 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(37, 211, 102, 0.6);
+    border-radius: 50%;
+    animation: float 15s ease-in-out infinite;
+}
+
+body::before {
+    top: 20%;
+    left: 30%;
+    animation-delay: -2s;
+}
+
+body::after {
+    bottom: 30%;
+    right: 20%;
+    animation-delay: -5s;
+}
+
+@keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(50px, -50px) scale(1.5); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+header {
+    position: relative;
+    padding-top: 80px; /* Espaço para o texto animado e a barra de carregamento */
+}
+
+.main-text {
+    font-size: 0;
+    color: #25d366;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 10px rgba(37, 211, 102, 0.9),
+        0 0 20px rgba(37, 211, 102, 0.7),
+        0 0 40px rgba(37, 211, 102, 0.5);
+    white-space: nowrap; /* Garante que o texto não quebre */
+    animation: 
+        neonPulse 1s ease-in-out infinite alternate,
+        float3D 5s ease-in-out infinite,
+        glitch 2s infinite,
+        vibrate 0.1s infinite;
+    position: absolute;
+    top: -50px; /* Posiciona acima do h1 */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    max-width: 100vw; /* Ajustado para permitir o texto completo */
+    perspective: 500px; /* Adiciona perspectiva para o efeito 3D */
+}
+
+.main-text span {
+    display: inline-block;
+    font-size: calc(2.5vw + 0.8rem); /* Reduzido para evitar corte */
+    opacity: 0;
+    transform: translateZ(-80px) rotateX(-60deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.main-text span.visible {
+    opacity: 1;
+    transform: translateZ(40px) rotateX(0deg);
+}
+
+.main-text span::after {
+    content: attr(data-char);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.4);
+    transform: translateZ(15px);
+    opacity: 0;
+    animation: lightReflection 1.5s infinite;
+}
+
+.main-text span.visible::after {
+    opacity: 0.6;
+}
+
+.loading-bar {
+    position: absolute;
+    top: 10px; /* Abaixo do texto animado */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading-bar .progress {
+    width: 0%;
+    height: 100%;
+    background-color: #25d366;
+    transition: width 0.1s linear;
+}
+
+@keyframes lightReflection {
+    0% { transform: translateZ(15px) translateX(-3px); opacity: 0.4; }
+    50% { transform: translateZ(20px) translateX(3px); opacity: 0.7; }
+    100% { transform: translateZ(15px) translateX(-3px); opacity: 0.4; }
+}
+
+@keyframes neonPulse {
+    0% { 
+        text-shadow: 
+            0 0 10px rgba(37, 211, 102, 0.9),
+            0 0 20px rgba(37, 211, 102, 0.7),
+            0 0 40px rgba(37, 211, 102, 0.5);
+    }
+    100% { 
+        text-shadow: 
+            0 0 15px rgba(37, 211, 102, 1),
+            0 0 30px rgba(37, 211, 102, 0.8),
+            0 0 60px rgba(37, 211, 102, 0.6);
+    }
+}
+
+@keyframes float3D {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    50% { transform: translateX(-50%) rotateX(20deg) translateZ(80px) rotateY(5deg); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+}
+
+@keyframes glitch {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    2% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateX(-3px) skew(8deg); }
+    4% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateX(3px) skew(-8deg); }
+    6% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(0); }
+    50% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(1px); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(0); }
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+header h1::before {
+    content: url('https://cdn-icons-gif.flaticon.com/11415/11415949.gif');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transform: scale(0.8);
+    color: #fff;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 1;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.btn::before {
+    content: url('https://cdn-icons-gif.flaticon.com/11415/11415949.gif');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #064c3f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    position: relative;
+}
+
+.modal-content .back-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.modal-content .back-icon:hover {
+    color: #064c3f;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content h2 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+#error-modal .modal-content p {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.modal-content label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.time-input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.time-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.3);
+}
+
+.time-input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.time-input-container::after {
+    content: '🕒';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .modal-content .back-icon {
+        font-size: 2rem;
+    }
+
+    .main-text span {
+        font-size: calc(3vw + 0.6rem); /* Reduzido para evitar corte */
+    }
+
+    .loading-bar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+        color: #fff;
+    }
+
+    header h1::before {
+        transform: scale(0.6);
+    }
+
+    .btn::before {
+        transform: scale(0.5);
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .modal-buttons {
+        flex-direction: column;
+    }
+
+    .modal-buttons button {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .modal-content .back-icon {
+        font-size: 2rem;
+    }
+
+    .main-text span {
+        font-size: calc(4vw + 0.4rem); /* Reduzido para evitar corte */
+    }
+
+    .loading-bar {
+        width: 90%;
+    }
+}</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act73" ve="7">
+			<code>410</code>
+			<label>&lt;b&gt;&lt;font color=green&gt;
+
+project_path "js"</label>
+			<Str sr="arg0" ve="3">%project_path/js/index.js</Str>
+			<Str sr="arg1" ve="3">const textSpans = document.querySelectorAll('.main-text span');
+const progressBar = document.querySelector('.loading-bar .progress');
+let isPaused = false;
+let animationStartTime = null;
+let animationFrame;
+let isProcessing = false;
+
+function animate() {
+    if (isPaused) return;
+
+    const elapsed = (Date.now() - animationStartTime) / 1000;
+    const cycleDuration = 10;
+    const progress = (elapsed % cycleDuration) / cycleDuration;
+
+    progressBar.style.width = `${progress * 100}%`;
+
+    const totalLetters = textSpans.length;
+    const letterInterval = cycleDuration / totalLetters;
+    textSpans.forEach((span, index) =&gt; {
+        const letterTime = index * letterInterval;
+        if (elapsed % cycleDuration &gt;= letterTime) {
+            span.classList.add('visible');
+        } else {
+            span.classList.remove('visible');
+        }
+    });
+
+    animationFrame = requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+    animationStartTime = Date.now();
+    if (!isPaused) {
+        animationFrame = requestAnimationFrame(animate);
+    }
+}
+
+function togglePause() {
+    isPaused = !isPaused;
+    if (isPaused) {
+        cancelAnimationFrame(animationFrame);
+    } else {
+        animationStartTime = Date.now() - (animationStartTime ? (Date.now() - animationStartTime) % 10000 : 0);
+        animate();
+    }
+}
+
+startAnimation();
+
+document.querySelector('.main-text').addEventListener('touchstart', (e) =&gt; {
+    e.preventDefault();
+    togglePause();
+});
+document.querySelector('.main-text').addEventListener('click', togglePause);
+
+const updateNowBtn = document.getElementById('update-now-btn');
+const scheduleBtn = document.getElementById('schedule-btn');
+const scheduleModal = document.getElementById('schedule-modal');
+const confirmationModal = document.getElementById('confirmation-modal');
+const errorModal = document.getElementById('error-modal');
+const confirmScheduleBtn = document.getElementById('confirm-schedule-btn');
+const backScheduleIcon = document.getElementById('back-schedule-icon');
+const backConfirmationIcon = document.getElementById('back-confirmation-icon');
+const confirmBtn = document.getElementById('confirm-btn');
+const scheduleTimeInput = document.getElementById('schedule-time');
+const confirmationText = document.getElementById('confirmation-text');
+const errorText = document.getElementById('error-text');
+
+function closeAllModals() {
+    scheduleModal.style.display = 'none';
+    confirmationModal.style.display = 'none';
+    errorModal.style.display = 'none';
+}
+
+function openModal(modal) {
+    closeAllModals();
+    modal.style.display = 'flex';
+    isProcessing = false;
+}
+
+function closeModal(modal) {
+    modal.style.display = 'none';
+    isProcessing = false;
+}
+
+function getCurrentBrazilianTime() {
+    const now = new Date();
+    return now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false });
+}
+
+function getCurrentBrazilianTimePlusFiveMinutes() {
+    const now = new Date();
+    now.setMinutes(now.getMinutes() + 5); // Adiciona 5 minutos
+    return now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false });
+}
+
+function isTimeValid(selectedTime, currentTime) {
+    const [selectedHours, selectedMinutes] = selectedTime.split(':').map(Number);
+    const [currentHours, currentMinutes] = currentTime.split(':').map(Number);
+    const selectedTotalMinutes = selectedHours * 60 + selectedMinutes;
+    const currentTotalMinutes = currentHours * 60 + currentMinutes;
+    const minAllowedMinutes = currentTotalMinutes + 5; // Deve ser pelo menos 5 minutos à frente
+    return selectedTotalMinutes &gt;= minAllowedMinutes;
+}
+
+function formatBrazilianTime(time) {
+    if (!time) return '';
+    const [hours, minutes] = time.split(':');
+    return `${hours}:${minutes}`;
+}
+
+function showErrorModal(message) {
+    errorText.textContent = message;
+    openModal(errorModal);
+    setTimeout(() =&gt; {
+        closeModal(errorModal);
+        openModal(scheduleModal);
+    }, 5000);
+}
+
+errorModal.addEventListener('click', (e) =&gt; {
+    if (e.target === errorModal) {
+        closeModal(errorModal);
+        openModal(scheduleModal);
+    }
+});
+
+updateNowBtn.addEventListener('click', () =&gt; {
+    ///alert("atualizar agora");
+
+    tk.setLocal("to_update","update now");
+
+    tk.destroyScene('UPDATES v(1.0)');
+});
+
+scheduleBtn.addEventListener('click', () =&gt; {
+    if (isProcessing) return;
+    isProcessing = true;
+    const timePlusFiveMinutes = getCurrentBrazilianTimePlusFiveMinutes();
+    scheduleTimeInput.value = timePlusFiveMinutes;
+    openModal(scheduleModal);
+});
+
+backScheduleIcon.addEventListener('click', () =&gt; {
+    if (isProcessing) return;
+    isProcessing = true;
+    closeModal(scheduleModal);
+});
+
+confirmScheduleBtn.addEventListener('click', () =&gt; {
+    if (isProcessing) return;
+    isProcessing = true;
+    const selectedTime = scheduleTimeInput.value;
+    const currentTime = getCurrentBrazilianTime();
+    if (selectedTime) {
+        if (isTimeValid(selectedTime, currentTime)) {
+            confirmationText.textContent = `Confirmar agendamento para ${formatBrazilianTime(selectedTime)} ?`;
+            closeModal(scheduleModal);
+            openModal(confirmationModal);
+        } else {
+            showErrorModal(`Horário inválido! Escolha um horário pelo menos 5 minutos do horário atual ${currentTime}.`);
+        }
+    } else {
+        showErrorModal('Por favor, selecione seu horário.');
+    }
+});
+
+backConfirmationIcon.addEventListener('click', () =&gt; {
+    if (isProcessing) return;
+    isProcessing = true;
+    closeModal(confirmationModal);
+    openModal(scheduleModal);
+});
+
+confirmBtn.addEventListener('click', () =&gt; {
+    if (isProcessing) return;
+    isProcessing = true;
+    const selectedTime = formatBrazilianTime(scheduleTimeInput.value);
+    closeModal(confirmationModal);
+    ///alert(JSON.stringify({ horario: selectedTime }));
+
+    tk.setLocal("active_scheduling",JSON.stringify({ horario: selectedTime }));
+
+    tk.destroyScene('UPDATES v(1.0)');
+});</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act74" ve="7">
+			<code>126</code>
+			<Str sr="arg0" ve="3"/>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act75" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act76" ve="7">
+			<code>37</code>
+			<coll>true</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>no_update</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act77" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%project_path</Str>
+			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/WEB VIEW/Scenes WuzapiChatBot/check-update</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act78" ve="7">
+			<code>410</code>
+			<label>&lt;b&gt;&lt;font color=#00bfff&gt;
+
+project_path "css"</label>
+			<Str sr="arg0" ve="3">%project_path/css/index.css</Str>
+			<Str sr="arg1" ve="3">:root {
+    --primary-color: #25d366; /* Verde claro para footer */
+    --secondary-color: #075e54; /* Verde escuro para botões */
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --accent-color: #e0e7ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: radial-gradient(circle, #2a0a0a 0%, #3a1a1a 70%, #d32f2f 100%); /* Fundo ajustado para tons de vermelho */
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.9;
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(37, 211, 102, 0.6);
+    border-radius: 50%;
+    animation: float 15s ease-in-out infinite;
+}
+
+body::before {
+    top: 20%;
+    left: 30%;
+    animation-delay: -2s;
+}
+
+body::after {
+    bottom: 30%;
+    right: 20%;
+    animation-delay: -5s;
+}
+
+@keyframes bgPulse {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+    50% { transform: translate(50px, -50px) scale(1.5); opacity: 0.8; }
+    100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+header {
+    position: relative;
+    padding-top: 80px; /* Espaço para o texto animado e a barra de carregamento */
+}
+
+.main-text {
+    font-size: 0;
+    color: #25d366;
+    text-transform: uppercase;
+    text-shadow: 
+        0 0 10px rgba(37, 211, 102, 0.9),
+        0 0 20px rgba(37, 211, 102, 0.7),
+        0 0 40px rgba(37, 211, 102, 0.5);
+    white-space: nowrap; /* Garante que o texto não quebre */
+    animation: 
+        neonPulse 1s ease-in-out infinite alternate,
+        float3D 5s ease-in-out infinite,
+        glitch 2s infinite,
+        vibrate 0.1s infinite;
+    position: absolute;
+    top: -50px; /* Posiciona acima do h1 */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    max-width: 100vw; /* Ajustado para permitir o texto completo */
+    perspective: 500px; /* Adiciona perspectiva para o efeito 3D */
+}
+
+.main-text span {
+    display: inline-block;
+    font-size: calc(2.5vw + 0.8rem); /* Reduzido para evitar corte */
+    opacity: 0;
+    transform: translateZ(-80px) rotateX(-60deg);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.main-text span.visible {
+    opacity: 1;
+    transform: translateZ(40px) rotateX(0deg);
+}
+
+.main-text span::after {
+    content: attr(data-char);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.4);
+    transform: translateZ(15px);
+    opacity: 0;
+    animation: lightReflection 1.5s infinite;
+}
+
+.main-text span.visible::after {
+    opacity: 0.6;
+}
+
+.loading-bar {
+    position: absolute;
+    top: 10px; /* Abaixo do texto animado */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading-bar .progress {
+    width: 0%;
+    height: 100%;
+    background-color: #25d366;
+    transition: width 0.1s linear;
+}
+
+@keyframes lightReflection {
+    0% { transform: translateZ(15px) translateX(-3px); opacity: 0.4; }
+    50% { transform: translateZ(20px) translateX(3px); opacity: 0.7; }
+    100% { transform: translateZ(15px) translateX(-3px); opacity: 0.4; }
+}
+
+@keyframes neonPulse {
+    0% { 
+        text-shadow: 
+            0 0 10px rgba(37, 211, 102, 0.9),
+            0 0 20px rgba(37, 211, 102, 0.7),
+            0 0 40px rgba(37, 211, 102, 0.5);
+    }
+    100% { 
+        text-shadow: 
+            0 0 15px rgba(37, 211, 102, 1),
+            0 0 30px rgba(37, 211, 102, 0.8),
+            0 0 60px rgba(37, 211, 102, 0.6);
+    }
+}
+
+@keyframes float3D {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    50% { transform: translateX(-50%) rotateX(20deg) translateZ(80px) rotateY(5deg); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+}
+
+@keyframes glitch {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    2% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateX(-3px) skew(8deg); }
+    4% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateX(3px) skew(-8deg); }
+    6% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px); }
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(0); }
+    50% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(1px); }
+    100% { transform: translateX(-50%) rotateX(25deg) translateZ(50px) translateY(0); }
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+header h1::before {
+    content: url('https://cdn-icons-gif.flaticon.com/11415/11415949.gif');
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    transform: scale(0.8);
+    color: #fff;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 1;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.btn::before {
+    content: url('https://cdn-icons-gif.flaticon.com/11415/11415949.gif');
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    transform: scale(0.6);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #064c3f;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .main-text span {
+        font-size: calc(3vw + 0.6rem); /* Reduzido para evitar corte */
+    }
+
+    .loading-bar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+        color: #fff;
+    }
+
+    header h1::before {
+        transform: scale(0.6);
+    }
+
+    .btn::before {
+        transform: scale(0.5);
+    }
+
+    .main-text span {
+        font-size: calc(4vw + 0.4rem); /* Reduzido para evitar corte */
+    }
+
+    .loading-bar {
+        width: 90%;
+    }
+}</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act79" ve="7">
+			<code>410</code>
+			<label>&lt;b&gt;&lt;font color=green&gt;
+
+project_path "js"</label>
+			<Str sr="arg0" ve="3">%project_path/js/index.js</Str>
+			<Str sr="arg1" ve="3">const textSpans = document.querySelectorAll('.main-text span');
+const progressBar = document.querySelector('.loading-bar .progress');
+let isPaused = false;
+let animationStartTime = null;
+let animationFrame;
+let isProcessing = false;
+
+function animate() {
+    if (isPaused) return;
+
+    const elapsed = (Date.now() - animationStartTime) / 1000;
+    const cycleDuration = 10;
+    const progress = (elapsed % cycleDuration) / cycleDuration;
+
+    progressBar.style.width = `${progress * 100}%`;
+
+    const totalLetters = textSpans.length;
+    const letterInterval = cycleDuration / totalLetters;
+    textSpans.forEach((span, index) =&gt; {
+        const letterTime = index * letterInterval;
+        if (elapsed % cycleDuration &gt;= letterTime) {
+            span.classList.add('visible');
+        } else {
+            span.classList.remove('visible');
+        }
+    });
+
+    animationFrame = requestAnimationFrame(animate);
+}
+
+function startAnimation() {
+    animationStartTime = Date.now();
+    if (!isPaused) {
+        animationFrame = requestAnimationFrame(animate);
+    }
+}
+
+function togglePause() {
+    isPaused = !isPaused;
+    if (isPaused) {
+        cancelAnimationFrame(animationFrame);
+    } else {
+        animationStartTime = Date.now() - (animationStartTime ? (Date.now() - animationStartTime) % 10000 : 0);
+        animate();
+    }
+}
+
+startAnimation();
+
+document.querySelector('.main-text').addEventListener('touchstart', (e) =&gt; {
+    e.preventDefault();
+    togglePause();
+});
+document.querySelector('.main-text').addEventListener('click', togglePause);
+
+const exitBtn = document.getElementById('exit-btn');
+
+exitBtn.addEventListener('click', () =&gt; {
+    ///alert('Encerrando sessão...');
+    
+    tk.setLocal("exit","exit");
+    
+    tk.destroyScene("NO_UPDATES v(1.0)");
+});</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
 		<Action sr="act8" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act80" ve="7">
+			<code>126</code>
+			<Str sr="arg0" ve="3"/>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act81" ve="7">
 			<code>38</code>
 		</Action>
 		<Action sr="act9" ve="7">
