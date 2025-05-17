@@ -2,7 +2,7 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1742831739518</cdate>
 		<name>(ID: plchldr) progvers(vcod) -Wuzapi ChatBoot - tasks submit</name>
-		<tids>354,471,413,433,460,412,383,402,422,466,403,368,429,392,457,421,388,365,461,462,459,370,374,458,419,391,390,369</tids>
+		<tids>354,403,466,433,471,461,388,390,374,422,391,429,419,392,460,457,383,369,413,368,462,459,402,412,370,365,458,421</tids>
 		<tsort>UserReverse</tsort>
 		<Share sr="Share">
 			<b>true</b>
@@ -9953,7 +9953,7 @@ location caption
 	</Task>
 	<Task sr="task471">
 		<cdate>1731963712394</cdate>
-		<edate>1747476681220</edate>
+		<edate>1747478607001</edate>
 		<id>471</id>
 		<nme>#GENERATE CODES ( JAVA SCRIPT - CSS - SH ) v(1.0)</nme>
 		<pri>100</pri>
@@ -11651,7 +11651,7 @@ Tipo
 		</Action>
 		<Action sr="act70" ve="7">
 			<code>37</code>
-			<coll>false</coll>
+			<coll>true</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%par1</lhs>
@@ -12157,201 +12157,6 @@ footer {
 			<label>&lt;b&gt;&lt;font color=green&gt;
 
 project_path "js"</label>
-			<on>false</on>
-			<Str sr="arg0" ve="3">%project_path/js/index.js</Str>
-			<Str sr="arg1" ve="3">const textSpans = document.querySelectorAll('.main-text span');
-const progressBar = document.querySelector('.loading-bar .progress');
-let isPaused = false;
-let animationStartTime = null;
-let animationFrame;
-let isProcessing = false;
-
-function animate() {
-    if (isPaused) return;
-
-    const elapsed = (Date.now() - animationStartTime) / 1000;
-    const cycleDuration = 10;
-    const progress = (elapsed % cycleDuration) / cycleDuration;
-
-    progressBar.style.width = `${progress * 100}%`;
-
-    const totalLetters = textSpans.length;
-    const letterInterval = cycleDuration / totalLetters;
-    textSpans.forEach((span, index) =&gt; {
-        const letterTime = index * letterInterval;
-        if (elapsed % cycleDuration &gt;= letterTime) {
-            span.classList.add('visible');
-        } else {
-            span.classList.remove('visible');
-        }
-    });
-
-    animationFrame = requestAnimationFrame(animate);
-}
-
-function startAnimation() {
-    animationStartTime = Date.now();
-    if (!isPaused) {
-        animationFrame = requestAnimationFrame(animate);
-    }
-}
-
-function togglePause() {
-    isPaused = !isPaused;
-    if (isPaused) {
-        cancelAnimationFrame(animationFrame);
-    } else {
-        animationStartTime = Date.now() - (animationStartTime ? (Date.now() - animationStartTime) % 10000 : 0);
-        animate();
-    }
-}
-
-startAnimation();
-
-document.querySelector('.main-text').addEventListener('touchstart', (e) =&gt; {
-    e.preventDefault();
-    togglePause();
-});
-document.querySelector('.main-text').addEventListener('click', togglePause);
-
-const updateNowBtn = document.getElementById('update-now-btn');
-const scheduleBtn = document.getElementById('schedule-btn');
-const scheduleModal = document.getElementById('schedule-modal');
-const confirmationModal = document.getElementById('confirmation-modal');
-const errorModal = document.getElementById('error-modal');
-const confirmScheduleBtn = document.getElementById('confirm-schedule-btn');
-const backScheduleIcon = document.getElementById('back-schedule-icon');
-const backConfirmationIcon = document.getElementById('back-confirmation-icon');
-const confirmBtn = document.getElementById('confirm-btn');
-const scheduleTimeInput = document.getElementById('schedule-time');
-const confirmationText = document.getElementById('confirmation-text');
-const errorText = document.getElementById('error-text');
-
-function closeAllModals() {
-    scheduleModal.style.display = 'none';
-    confirmationModal.style.display = 'none';
-    errorModal.style.display = 'none';
-}
-
-function openModal(modal) {
-    closeAllModals();
-    modal.style.display = 'flex';
-    isProcessing = false;
-}
-
-function closeModal(modal) {
-    modal.style.display = 'none';
-    isProcessing = false;
-}
-
-function getCurrentBrazilianTime() {
-    const now = new Date();
-    return now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false });
-}
-
-function getCurrentBrazilianTimePlusFiveMinutes() {
-    const now = new Date();
-    now.setMinutes(now.getMinutes() + 5); // Adiciona 5 minutos
-    return now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', hour12: false });
-}
-
-function isTimeValid(selectedTime, currentTime) {
-    const [selectedHours, selectedMinutes] = selectedTime.split(':').map(Number);
-    const [currentHours, currentMinutes] = currentTime.split(':').map(Number);
-    const selectedTotalMinutes = selectedHours * 60 + selectedMinutes;
-    const currentTotalMinutes = currentHours * 60 + currentMinutes;
-    const minAllowedMinutes = currentTotalMinutes + 5; // Deve ser pelo menos 5 minutos à frente
-    return selectedTotalMinutes &gt;= minAllowedMinutes;
-}
-
-function formatBrazilianTime(time) {
-    if (!time) return '';
-    const [hours, minutes] = time.split(':');
-    return `${hours}:${minutes}`;
-}
-
-function showErrorModal(message) {
-    errorText.textContent = message;
-    openModal(errorModal);
-    setTimeout(() =&gt; {
-        closeModal(errorModal);
-        openModal(scheduleModal);
-    }, 5000);
-}
-
-errorModal.addEventListener('click', (e) =&gt; {
-    if (e.target === errorModal) {
-        closeModal(errorModal);
-        openModal(scheduleModal);
-    }
-});
-
-updateNowBtn.addEventListener('click', () =&gt; {
-    ///alert("atualizar agora");
-
-    tk.setLocal("to_update","update now");
-
-    tk.destroyScene('UPDATES v(1.0)');
-});
-
-scheduleBtn.addEventListener('click', () =&gt; {
-    if (isProcessing) return;
-    isProcessing = true;
-    const timePlusFiveMinutes = getCurrentBrazilianTimePlusFiveMinutes();
-    scheduleTimeInput.value = timePlusFiveMinutes;
-    openModal(scheduleModal);
-});
-
-backScheduleIcon.addEventListener('click', () =&gt; {
-    if (isProcessing) return;
-    isProcessing = true;
-    closeModal(scheduleModal);
-});
-
-confirmScheduleBtn.addEventListener('click', () =&gt; {
-    if (isProcessing) return;
-    isProcessing = true;
-    const selectedTime = scheduleTimeInput.value;
-    const currentTime = getCurrentBrazilianTime();
-    if (selectedTime) {
-        if (isTimeValid(selectedTime, currentTime)) {
-            confirmationText.textContent = `Confirmar agendamento para ${formatBrazilianTime(selectedTime)} ?`;
-            closeModal(scheduleModal);
-            openModal(confirmationModal);
-        } else {
-            showErrorModal(`Horário inválido! Escolha um horário pelo menos 5 minutos do horário atual ${currentTime}.`);
-        }
-    } else {
-        showErrorModal('Por favor, selecione seu horário.');
-    }
-});
-
-backConfirmationIcon.addEventListener('click', () =&gt; {
-    if (isProcessing) return;
-    isProcessing = true;
-    closeModal(confirmationModal);
-    openModal(scheduleModal);
-});
-
-confirmBtn.addEventListener('click', () =&gt; {
-    if (isProcessing) return;
-    isProcessing = true;
-    const selectedTime = formatBrazilianTime(scheduleTimeInput.value);
-    closeModal(confirmationModal);
-    ///alert(JSON.stringify({ horario: selectedTime }));
-
-    tk.setLocal("active_scheduling",JSON.stringify({ horario: selectedTime }));
-
-    tk.destroyScene('UPDATES v(1.0)');
-});</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act74" ve="7">
-			<code>410</code>
-			<label>&lt;b&gt;&lt;font color=green&gt;
-
-project_path "js"</label>
 			<Str sr="arg0" ve="3">%project_path/js/index.js</Str>
 			<Str sr="arg1" ve="3">const textSpans = document.querySelectorAll('.main-text span');
 const progressBar = document.querySelector('.loading-bar .progress');
@@ -12542,7 +12347,7 @@ confirmBtn.addEventListener('click', () =&gt; {
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act75" ve="7">
+		<Action sr="act74" ve="7">
 			<code>126</code>
 			<Str sr="arg0" ve="3"/>
 			<Int sr="arg1" val="0"/>
@@ -12550,10 +12355,10 @@ confirmBtn.addEventListener('click', () =&gt; {
 			<Int sr="arg3" val="0"/>
 			<Str sr="arg4" ve="3"/>
 		</Action>
-		<Action sr="act76" ve="7">
+		<Action sr="act75" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act77" ve="7">
+		<Action sr="act76" ve="7">
 			<code>37</code>
 			<coll>true</coll>
 			<ConditionList sr="if">
@@ -12564,7 +12369,7 @@ confirmBtn.addEventListener('click', () =&gt; {
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act78" ve="7">
+		<Action sr="act77" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%project_path</Str>
 			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/WEB VIEW/Scenes WuzapiChatBot/check-update</Str>
@@ -12574,7 +12379,7 @@ confirmBtn.addEventListener('click', () =&gt; {
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act79" ve="7">
+		<Action sr="act78" ve="7">
 			<code>410</code>
 			<label>&lt;b&gt;&lt;font color=#00bfff&gt;
 
@@ -12966,10 +12771,7 @@ footer {
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act8" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act80" ve="7">
+		<Action sr="act79" ve="7">
 			<code>410</code>
 			<label>&lt;b&gt;&lt;font color=green&gt;
 
@@ -13062,7 +12864,10 @@ modal.addEventListener('click', (e) =&gt; {
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act81" ve="7">
+		<Action sr="act8" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act80" ve="7">
 			<code>126</code>
 			<Str sr="arg0" ve="3"/>
 			<Int sr="arg1" val="0"/>
@@ -13070,7 +12875,7 @@ modal.addEventListener('click', (e) =&gt; {
 			<Int sr="arg3" val="0"/>
 			<Str sr="arg4" ve="3"/>
 		</Action>
-		<Action sr="act82" ve="7">
+		<Action sr="act81" ve="7">
 			<code>38</code>
 		</Action>
 		<Action sr="act9" ve="7">
